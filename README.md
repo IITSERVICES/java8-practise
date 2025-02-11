@@ -880,6 +880,7 @@ Java 9
 -> In order to use the jshell following steps:
 
 Stpe1: Open the command prompt
+```
 > jshell
  - Here we can define variables, methods , loops, ect..
 
@@ -909,6 +910,7 @@ jshell> for(int i=1;i<=10;i++){if(i%2==0){System.out.println(i);}}
 6
 8
 10
+```
 ========================================================================================
 Private Method in interface
 ----------------------------
