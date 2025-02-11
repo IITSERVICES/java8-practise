@@ -62,6 +62,7 @@ public class Test {
 ------------------------------------------------------------------------------------------------
 Example2
 --------
+```
 import java.util.function.Predicate;
 
 class MyImpl implements Predicate<Integer> {
@@ -90,6 +91,7 @@ public class Test {
 	}
 
 }
+```
 ------------------------------------------------------------------------------------------------
 4.  default method & static method
 -----------------------------------
@@ -100,13 +102,14 @@ public class Test {
         public abstract method();
    }
 - Since from JDK 1.8 version onwards there is some changes in an interface:
-    interface interfaceName{
+```
+   interface interfaceName{
         public static final variable;
         public abstract method();
         default method
         static method
    }
-
+```
 
 - A method which is declare with default keyword and contain a body inside the interface.
 - This default method is applicable to all the implemenation classes.
@@ -124,6 +127,7 @@ ii. static method in an interface
 
 Example
 ------
+```
 DAO.java(interface)
 public interface DAO {
 	public void addEmployee();
@@ -146,6 +150,7 @@ public class ClientApplication {
 	}
 
 }
+```
 ------------------------------------------------------------------------------------------------
 Nested Classes
 ---------------
@@ -153,12 +158,14 @@ Nested Classes
 
 Syntax:
 ------
+```
     class OuterClass{
     		//members of a outer-class
            class InnerClass{
              // members of a inner-class
            }
     }
+```
 - In order to logically group the classes and interface in single file.
 - It help us to optimized the code.
 - We can access the private member of outer-class inside the inner-class.
@@ -174,6 +181,7 @@ Syntax:
 --------------------------------------------------------------------------------------------
 1. Member Inner class
 ----------------------
+```
 class A{
 	//member
 	int a; // member
@@ -216,6 +224,7 @@ public class Test {
 	}
 
 }
+```
 -----------------------------------------------------------------------------------------------
 Topic : Java 8 Features
 -----------------------------------------------------------------------------------------------
@@ -226,7 +235,7 @@ Topic : Java 8 Features
 
 Example
 -------
-
+```
 interface A{//A.class
 	void message(String msg);
 }
@@ -258,6 +267,7 @@ class Test1$1 implements A {
   Test1$1();
   public void message(java.lang.String);
 }
+```
 ---------------------------------------------------------------------------------------------------
 1. Lambda Expression
 2. Functional Interface
@@ -287,10 +297,11 @@ tried to add the elements of functional programming in java.
 
  Example
  --------
+ ```
     ()->{
        System.out.println("Lambda Expression");
     }
-
+```
 Why to use labmda expression
 ----------------------------
 - To write the functional programming in java
@@ -300,7 +311,7 @@ Why to use labmda expression
 
 Example1:
 --------
-
+```
 @FunctionalInterface
 interface A{//A.class
 void message1();
@@ -359,10 +370,11 @@ public class Test1 {//Test1.class
 	    System.out.println(result);
 	}
 }
+```
 ----------------------------------------------------------------------------------------------------
 1. Predicate
    public boolean test(Object o);
-
+```
 import java.util.function.Predicate;
  
 //Write a java code to find all the even number from 1 to 100
@@ -378,11 +390,13 @@ public static void main(String[] args) {
 		 
 	}
 }
+```
 -----------------------------------------------------------------------------------------------------
 2. Function
  
    R apply(T t);
    -> This method take some input and generate some output.
+```
 import java.util.function.Function;
  
 //Display all the names of items in upper case 
@@ -426,6 +440,7 @@ public static void main(String[] args) {
 		 
 	}
 }
+```
 -----------------------------------------------------------------------------------------------------
 4. Consumer
 Represents an operation that accepts a single input argument and returns no result. Unlike most other functional interfaces, Consumer is expected to operate via side-effects.
@@ -433,6 +448,7 @@ void accept(T t);
 
 Example
 -------
+```
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
@@ -474,6 +490,7 @@ public static void main(String[] args) {
 		
 	}
 }
+```
 ------------------------------------------------------------------------------------------------------
 Method Reference(::) Operator
 ------------------------------
@@ -492,6 +509,7 @@ Syntax:
 
 Example
 -------
+```
 @FunctionalInterface
 interface A {// A.class
 	void message1();
@@ -527,6 +545,7 @@ public class Test1 {// Test1.class
 	 
 	}
 }
+```
 -----------------------------------------------------------------------------------------------
 Stream
 -------
@@ -546,6 +565,7 @@ Syntax:
 
 Example
 -------
+```
 import java.util.ArrayList;
 import java.util.stream.Stream;
 
@@ -566,10 +586,10 @@ public class Test1 {// Test1.class
 
 	}
 }
-
+```
 ----------------------------------------------------------------------------------------------------
 Topic: Java 8 
-
+```
 package com.iits;
 
 import java.util.ArrayList;
@@ -740,6 +760,7 @@ public class Test {
 	}
 
 }
+```
 ------------------------------------------------------------------------------------
 Features : Java 9
 
@@ -751,6 +772,7 @@ Optional
 
 Example
 --------
+```
 package com.iits;
 
 import java.util.Arrays;
@@ -843,6 +865,7 @@ public class Test3 {
 	}
 
 }
+```
 ----------------------------------------------------------------------------------------
 Java 9
 ------
@@ -889,6 +912,7 @@ jshell> for(int i=1;i<=10;i++){if(i%2==0){System.out.println(i);}}
 ========================================================================================
 Private Method in interface
 ----------------------------
+```
 interface InterfaceName{
 	//upto jdk 1.8v 
 	//public static final variables
@@ -935,12 +959,14 @@ public class Test4 {
 	}
 
 }
+```
 --------------------------------------------------------------------------------------
 Try With Resource
 -----------------
 -> This feature is added from jdk 1.7 version onwards.
 
 //Upto JDK 1.6  try-catch-finally
+```
 package com.iits;
 
 import java.io.FileInputStream;
@@ -985,11 +1011,12 @@ public class Test5 {
 	}
 
 }
+```
 -------------------------------------------------------------------------------------
 - In JDK 1.7v we cannot declare the resource outside the try block , in order to
 overcome this issued since from jdk 1.9v onwards they have introduced to declare
 the resource inside the try block:
-
+```
 package com.iits;
 
 import java.io.FileInputStream;
@@ -1008,6 +1035,7 @@ public class Test5 {
 	}
 
 }
+```
 -------------------------------------------------------------------------------------
 Collection Factory Method
 -------------------------
@@ -1024,6 +1052,7 @@ Collection Factory Method
 
 Example
 -------
+```
 package com.iits;
 
 import java.util.List;
@@ -1047,6 +1076,7 @@ public class Test6 {
 	}
 
 }
+```
 ---------------------------------------------------------------------------------------
 Stream API  Methods added
 ---------------------------
@@ -1058,16 +1088,15 @@ Example;
 ----------
 2. Stream takeWhile();
 - When compare with filter method it will stop execute once it found false or fail.
+```
 List<Integer> list=List.of(1,3,5);
 	    list.stream()
 	    	//.filter(element->element%2==0)
 	    	 .takeWhile(element->element%2==0)
 	    	 .forEach(System.out::println);
-
+```
 --------------------------------------------------------------------------------------
 Java Fetaures: 10,11,12,13,14,15
-Link : https://onlinegdb.com/BU3URni2Q
-
 Java 10 Features
 ----------------
 
@@ -1090,6 +1119,7 @@ Rules :
 
 Example:
 -------
+```
 package com.iits;
 
 import java.util.ArrayList;
@@ -1125,6 +1155,7 @@ public class Test7 {
 		
 	}
 }
+```
 ===================================================================================
 //Since from JDK 11 we can use var to a lambda parameter
 		Message m=(var msg)->{
@@ -1142,6 +1173,7 @@ Switch Statement
 
 Example:
 ----------
+```
 package com.iits;
 
 public class SwitchChangesWIthVersion {
@@ -1162,13 +1194,14 @@ public class SwitchChangesWIthVersion {
 	}
 
 }
+```
 - Since from JDK 12v onwards oracle people has released the switch as expression(preview)
 - That is we can use switch as an expression , and it return a value and it is possible to assign that value to any variable.
 
 - Generally the switch expression we can use in two ways:
         1. By using break statement.
         2. By using lambda style syntax
-
+```
  package com.iits;
 
 public class SwitchChangesWIthVersion {
@@ -1185,6 +1218,7 @@ public class SwitchChangesWIthVersion {
 	}
 
 }
+```
 -In order to compile the above code we need to use the following command:
   >javac --enable-preview -source 12 SwitchChangesWIthVersion.java
   >java --enable-prview SwitchChangesWIthVersion
@@ -1194,6 +1228,7 @@ public class SwitchChangesWIthVersion {
 
 Example
 --------
+```
 package com.iits;
 
 public class SwitchChangesWIthVersion {
@@ -1215,12 +1250,13 @@ public class SwitchChangesWIthVersion {
 	}
 
 }
+```
 ---------------------------------------------------------------------------------------
 - Since from JDK 17version onwards there is quite changes in switch statement i.e. 
  Pattern Matching for switch (Preview)
  -------------------------------------
  - Before JDK 17 we can use downcasting , since from JDK 21 they have made standard.
-
+```
  package com.iits;
 
 interface Bank{
@@ -1262,9 +1298,11 @@ public class Test8 {
 	}
 
 }
+```
 =======================================================================================
 Example
 -------
+```
 package com.iits;
  
 public class Test8 {
@@ -1280,10 +1318,11 @@ public class Test8 {
 	}
 
 }
+```
 --------------------------------------------------------------------------------------
 - Since from JDK17 vresion pattern matching in switch(preview) has introduced for 
   matching instanceof in switch statement , but since from JDK 21 version they have made it standard.
-
+```
  package com.iits;
 
 public class Test8 {
@@ -1308,9 +1347,10 @@ public class Test8 {
 	}
 
 }
+```
 --------------------------------------------------------------------------------------
+```
 package com.iits;
-
 public class Test8 {
 	public static void main(String[] args) {
 		Object o = 10.0;
@@ -1343,8 +1383,7 @@ public class Test8 {
 
 	}
 }
-
-
+```
 ======================================================================================
 3. Compact Number Formatting
 ----------------------------
@@ -1352,6 +1391,7 @@ public class Test8 {
 1000 -> 1k
 1k   -> 1000
 
+```
 package com.iits;
 
 import java.text.NumberFormat;
@@ -1370,11 +1410,12 @@ public class Test8 {
 
 	 
 }
+```
 ---------------------------------------------------------------------------------------
 JDK 13 version
 ---------------
 1. Text Block(preview) but since from JDK 15 version they have made it standard
-
+```
 package com.iits;
 
 public class Test9 {
@@ -1391,11 +1432,12 @@ public class Test9 {
 	
 
 }
+```
 ---------------------------------------------------------------------------------------
 Example2:
 --------
 - Using with format specifier like %d for integer, %s for string and %f for float value
-
+```
 package com.iits;
 
 public class Test9 {
@@ -1412,6 +1454,7 @@ public class Test9 {
 	}
 
 }
+```
 ----------------------------------------------------------------------------------------
 
 
